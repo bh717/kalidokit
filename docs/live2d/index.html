@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- HTML Meta Tags -->
+    <title>KalidoKit - Face and Body Rig Solver</title>
+    <meta
+      name="description"
+      content="Track face and body rigs just your browser webcam!"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="kit.kalidoface.com" />
+    <meta property="twitter:url" content="https://kit.kalidoface.com/" />
+    <meta name="twitter:title" content="KalidoKit - Face and Body Rig Solver" />
+    <meta
+      name="twitter:description"
+      content="Track face and body rigs just your browser webcam!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://cdn.glitch.com/239c5934-4d83-4c5c-bef6-44dcdb04c8fb%2Fkalidoface-meta.jpg?v=1630110302224"
+    />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://yeemachine.github.io/kalidoface-live2d-models/Icons/icon-circle.svg"
+    />
+    <!--     Live2D SDK  -->
+    <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
+    <!--     PixiJS Renderer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+    <!--     PixiJS Live2D Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
+    <!--     Mediapipe or Tensorflow.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--     Mediapipe Drawing Tools -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--     Mediapipe Camera Tools -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--     Kalidokit Kinematic Solver -->
+    <script src="https://cdn.jsdelivr.net/npm/kalidokit@1.1/dist/kalidokit.umd.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="preview">
+      <video class="input_video" width="1280px" height="720px"></video>
+      <canvas class="guides"></canvas>
+      <section>
+        <a class="current" href="/live2d/"><p>Live2D</p></a>
+        <a href="/"><p>VRM</p></a>  
+      </section>
+    </div>
+    <h1 class="notranslate">
+      <a href="https://3d.kalidoface.com">kalidoface</a>
+    </h1>
+    <nav>
+      <a href="https://www.npmjs.com/package/kalidokit">
+        <img
+          src="https://cdn.glitch.me/447b6603-7eae-4da6-957d-73ee30c8e731%2Fnpm.png?v=1635133318451"
+        />
+      </a>
+      <a href="https://github.com/yeemachine/kalidokit">
+        <img
+          src="https://cdn.glitch.me/447b6603-7eae-4da6-957d-73ee30c8e731%2Fgithub.png?v=1635133310517"
+        />
+      </a>
+      <a href="https://twitter.com/yeemachine">
+        <img
+          src="https://cdn.glitch.me/447b6603-7eae-4da6-957d-73ee30c8e731%2Ftwitter.png?v=1635133322561"
+        />
+      </a>
+    </nav>
+    <canvas id="live2d"></canvas>
+    <p class="linkOut">
+      Visit
+      <a id="full" href="https://kalidoface.com">the full Vtuber App</a>!
+    </p>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
